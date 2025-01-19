@@ -7,7 +7,7 @@
     "build": "babel src/js --out-dir dist/js --copy-files",
     "copy-html-css": "robocopy src dist /E /XD dist/css dist/js dist/assets",
     "cleanup": "git gc --aggressive --prune=now",
-    "predeploy": "npm run cleanup && npm run build && npm run copy-html-css",
+    "predeploy": "npm run build && npm run copy-html-css",
     "deploy": "git checkout prod && robocopy dist . /E && rm dist -Force && git add . && git commit -m 'update prod' && git push origin prod"
   },
   "keywords": [],
