@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src/js --out-dir dist/js --copy-files",
-    "copy-html-css": "robocopy src dist /E /XD dist/css dist/js dist/assets",
+    "copy-html-css": "robocopy src dist /E /XD dist/css dist/js dist/assets && robocopy dist . /E",
     "cleanup": "git gc --aggressive --prune=now",
     "predeploy": "npm run cleanup && npm run build && npm run copy-html-css",
-    "deploy": "npm run predeploy && git checkout -b prod && git add dist && git commit -m 'update prod' && git push origin prod"
+    "deploy": "npm run predeploy && git checkout prod && git add . && git commit -m 'update prod' && git push origin prod && rm dist"
   },
   "keywords": [],
   "author": "",
