@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/js --out-dir dist/js --copy-files",
+    "copy-html-css": "cp -r src/*.html src/css src/assets dist/",
+    "predeploy": "npm run build && npm run copy-html-css",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "gh-pages": "^6.3.0"
+  }
+}
