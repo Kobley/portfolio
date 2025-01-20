@@ -1,0 +1,57 @@
+        
+                <div class="todo-container">
+                    <h1>To-Do List</h1>
+                    <div class="todo-input">
+                        <input type="text" id="todoInput" placeholder="Add a new task...">
+                        <button id="addBtn">Add</button>
+                    </div>
+                    <ul id="todoList"></ul>
+                </div>
+        
+                <script>
+                    const todoInput = document.getElementById('todoInput');
+                    const addBtn = document.getElementById('addBtn');
+                    const todoList = document.getElementById('todoList');
+        
+                    // Function to add a new task
+                    function addTask() {
+                    const taskText = todoInput.value.trim();
+                    if (taskText === '') return; // Prevent empty tasks
+        
+                    // Create a new list item
+                    const li = document.createElement('li');
+        
+                    // Add task text
+                    li.textContent = taskText;
+        
+                    // Add event listener for marking as completed
+                    li.addEventListener('click', () => {
+                        li.classList.toggle('completed');
+                    });
+        
+                    // Add delete button
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.textContent = '';
+                    deleteBtn.classList.add("removebtn")
+                    deleteBtn.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevent triggering the completion event
+                        li.remove();
+                    });
+        
+                    li.appendChild(deleteBtn);
+                    todoList.appendChild(li);
+        
+                    // Clear the input field
+                    todoInput.value = '';
+                    }
+        
+                    // Add event listener to the Add button
+                    addBtn.addEventListener('click', addTask);
+        
+                    // Optional: Add event listener for Enter key
+                    todoInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        addTask();
+                    }
+                    });
+                </script>

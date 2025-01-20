@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&display=swap');
+
+@font-face {
+    font-family: 'PT';
+    src: url('../assets/font/ProggyTiny.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BF';
+    src: url('../assets/font/BitFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

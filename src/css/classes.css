@@ -1,0 +1,40 @@
+
+.MOTD {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+}
+
+.banner {
+    height: 50px;
+    width: 100%;
+    background-image: url("../assets/images/stars.gif");
+    background-position: center;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    text-align: left;
+    max-width: var(--main-width);
+    background-color: var(--bg);
+    padding: 1em;
+    /* overflow-y: auto; */
+}
+
+.math {
+    font-size:32px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.removebtn {
+    background: url("../assets/icons/close.svg") no-repeat center;
+    background-size: contain; /* Ensures the SVG scales properly */
+    border: none; /* Removes the button border */
+    padding: 10px; /* Adjust the padding as needed */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    width: 32px; /* Set a fixed width */
+    height: 32px; /* Set a fixed height */
+}
