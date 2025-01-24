@@ -43,8 +43,10 @@ header {
 
 /* bordered title */
 fieldset {
-    border:solid 1px var(--bg-accent);
+    border: solid 1px var(--bg-accent);
+    /* background-color: red; */
     padding: 10px;
+    /* border-radius: 10px; */
 }
 legend {
     padding: 5px;
