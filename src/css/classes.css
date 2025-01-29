@@ -8,10 +8,74 @@
 .banner {
     height: 50px;
     width: 100%;
-    background-image: url("../assets/images/stars.gif");
+    background-image: url("../assets/images/stars5.gif");
     background-position: center;
     background-clip: padding-box;
     background-repeat: no-repeat;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    border-radius: .5em;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #444;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,.3);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Main Content */
@@ -19,9 +83,35 @@
     flex: 1;
     text-align: left;
     max-width: var(--main-width);
-    background-color: var(--bg);
+    background-color: var(--bg-outline);
     padding: 1em;
     /* overflow-y: auto; */
+}
+
+.profile-dropdown {
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    background-color: var(--bg-outline);
+    border: 1px solid var(--bg-accent);
+    list-style: none;
+    padding: 0px;
+    margin: 5px;
+    width: fit-content;
+    min-width: 115px;
+}
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    /* width: min-content; */
+}
+.dropdown-menu li:hover {
+    background: var(--bg-accent);
 }
 
 .math {
@@ -38,3 +128,5 @@
     width: 32px; /* Set a fixed width */
     height: 32px; /* Set a fixed height */
 }
+
+.hidden { display: none; }

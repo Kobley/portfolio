@@ -3,12 +3,13 @@
 
 /* Root */
 :root {
-    --bg: #222;
+    --bg: #111;
     --bg-accent: #333;
+    --bg-outline: #222;
     --accent: #ff8888;
     --text: #AAA;
-    --main-width: 1200px;
-    /* background-image: url("../assets/images/background2.gif");
+    --main-width: 800px;
+    /* background-image: url("../assets/images/stars.gif");
     background-repeat: repeat; */
 }
 
@@ -39,19 +40,35 @@ body {
 /* Header */
 header {
     font-size: 32px;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* bordered title */
 fieldset {
     border: solid 1px var(--bg-accent);
-    /* background-color: red; */
-    padding: 10px;
-    /* border-radius: 10px; */
+    background-color: var(--bg-outline);
+    padding: 100px;
+    border-radius: 10px;
 }
 legend {
-    padding: 5px;
+    margin: 5px;
+    /* background-color: var(--bg-accent);
+    border-radius: 10px; */
 }
 
+input {
+    font-family: "PT", sans-serif;
+    font-size: 16px;
+    border:none;
+    text-decoration: none;
+    outline: none;
+    background-color: var(--bg-accent);
+    color: var(--text);
+    accent-color: var(--accent);
+    padding: 3px;
+    margin: 3px;
+}
 
 /* breadcrumbs */
 ul {
@@ -74,14 +91,41 @@ ul.breadcrumb li+li:before {
 
 /* Footer */
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
-    background-color: var(--bg-accent);
+    background-color: var(--bg-outline);
+    border: solid 1px var(--bg-accent);
+    /* outline: 1px solid var(--bg-accent); */
     width: var(--main-width);
     text-align: center;
     padding: 10px;
     margin: 0px;
     font-size: 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 3px 5px;
+    font-family: 'PT', sans-serif;
+    color: var(--text);
+    background-color: var(--bg-outline);
+    border: none;
+    outline: 1px solid var(--bg-accent);
+    font-size: 16px;
+    transition: all 0.1s ease-in-out;
+}
+button:hover {
+    color: #fff;
+    background-color: var(--bg-accent);
+    outline: 1px solid #444;
+    transition: all 0.2s ease-in-out;
+}
+button:active {
+    color: var(--accent);
+    /* outline: 1px solid var(--accent); */
+    transition: all 0.1s ease-in-out;
 }
 
 /* Links */

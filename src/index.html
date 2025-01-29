@@ -14,52 +14,49 @@
     <meta content="#ff8888" data-react-helmet="true" name="theme-color" />
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
 
     <link type="image/png" sizes="192x192" rel="icon" href="assets/icons/icon.png">
     <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/icons/icon.png">
 
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="../bower_components/crypto-js/crypto-js.js"></script>
 </head>
-<body> 
-    <div class="MOTD">MOTD: "you gotta speculate to accumulate" - célyan empis</div>
-
-    <fieldset style="border: solid 1px var(--bg-accent);padding: 10px;">
+<body>
+    <div class="MOTD"></div>
+    
+    <fieldset style="border: solid 1px var(--bg-accent);padding: 10px;" class="animate__animated animate__fadeInDown">
         <legend>
             <ul class="breadcrumb" style="margin: 2px;padding: 0px;">
-            <li><a href="#">portfolio</a></li>
-            <li>home.html</li>
+                <li><a href="index.html">portfolio</a></li>
+                <li>login.html</li>
             </ul>
         </legend>
         <div class="content">
-            <header class="animate__animated animate__fadeInDown">
-                <div class="banner"></div>
-                <p>header</p>
+            <header>
+                login
             </header>
             <hr>
 
-            <hr>
-            <p class="animate__animated animate__fadeInLeft">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt consequuntur quaerat cumque voluptas excepturi harum, nobis iure beatae quae dolores nesciunt doloribus culpa sapiente ratione qui labore in error expedita.
-                Eius amet aperiam nesciunt magnam quaerat ea dolores! Cum, fugiat animi qui quod sunt consequatur voluptas odio corrupti, tempore quo vero eos delectus praesentium iure eum. Tempore id explicabo consectetur.
-                Cum quas quae voluptate quis suscipit nesciunt nemo, distinctio modi! Nemo, delectus. Fugiat illum, quos, illo, ab quas deleniti enim dignissimos consectetur fuga tempore excepturi magni? Sequi libero nesciunt iste.
-                Provident, deserunt quia. Illo, blanditiis. Nulla eveniet nam reprehenderit? Assumenda numquam rem adipisci facere voluptate pariatur quibusdam possimus molestias voluptatum voluptas animi, praesentium laboriosam, enim, rerum eveniet delectus porro error.
-                Pariatur autem nobis non cumque aspernatur praesentium esse, ab ipsum nesciunt quia reprehenderit dolorum enim ducimus recusandae voluptatem temporibus vel architecto eius. Reiciendis ab illum accusantium numquam placeat ducimus unde.
-                Eos culpa quasi, id atque molestias fuga obcaecati eaque eum vel laudantium quisquam ullam perferendis ipsum libero a mollitia hic similique debitis eligendi ut voluptatum esse commodi! Temporibus, impedit suscipit.
-                Provident explicabo assumenda dolore dolorum, id praesentium, totam nihil eveniet tenetur ipsum cum, vero ipsam maiores reiciendis omnis. Velit quasi nulla porro eaque voluptates non accusantium, similique neque sequi minus?
-                Nam, ea repellendus, quae at quod commodi quasi beatae molestiae quibusdam consectetur laborum accusamus impedit ipsa, voluptatem est omnis! Dignissimos laboriosam in accusantium harum porro iure voluptatibus a iste officia.
-                In assumenda, tempore molestiae nulla, at rem accusantium consectetur impedit vero veritatis illum iste iusto sequi eaque deleniti beatae distinctio! Temporibus, blanditiis mollitia! Aspernatur est vero voluptatibus quo nulla quae?
-                Asperiores voluptate adipisci laborum officiis totam voluptatum similique hic commodi excepturi eaque ducimus sed illum quo voluptates qui harum in deleniti, possimus enim debitis accusamus deserunt quas autem. Tenetur, nihil?
-            </p>
-
-            <footer>
-                <img style="height:24px;" src="assets/icons/document.svg">
-                <link rel="stylesheet" href="">
-                copyright &copy; 2025 <a href="https://kobley.github.io/portfolio">kobley.github.io</a>. All rights reserved
-            </footer>
+            <label for="user">username</label>
+            <input type="text" name="user" id="username_input" required>
+            <br>
+            <label for="pass">password</label>
+            <input type="password" name="pass" id="password_input" required>
+            <br>
+            <div style="display: flex;justify-content:center;justify-items: center;">
+                <button id="login-btn">login <i style="transform: translateY(2px);" class="fa fa-sign-in"></i></button>
+            </div>
         </div>
     </fieldset>
+
+    <footer>
+        <div style="float:left;"><a href="info.html">info</a></div>
+        <div style="float:right;">copyright &copy; 2025 <a href="https://kobley.github.io/portfolio">kobley.github.io</a>. All rights reserved</div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/login.js"></script>
 </body>
 </html>

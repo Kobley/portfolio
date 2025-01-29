@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+    <meta name="description" content="personal site">
+    <meta content="home page" property="og:title" />
+    <meta content="kobley personal site" property="og:description" />
+    <meta content="https://kobley.github.io/portfolio" property="og:url" />
+    <meta content="https://kobley.github.io/portfolio/assets/images/rocket.gif" property="og:image" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta content="#ff8888" data-react-helmet="true" name="theme-color" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/all.min.css">
+
+    <link type="image/png" sizes="192x192" rel="icon" href="assets/icons/icon.png">
+    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/icon.png">
+
+    <script type="text/javascript" src="../bower_components/crypto-js/crypto-js.js"></script>
+</head>
+<body> 
+    <div class="MOTD"></div>
+
+    <fieldset style="border: solid 1px var(--bg-accent);padding: 10px;">
+        <legend>
+            <ul class="breadcrumb" style="margin: 2px;padding: 0px;">
+                <li><a href="home.html">portfolio</a></li>
+                <li>profile.html</li>
+            </ul>
+        </legend>
+        <div class="account-buttons">
+            <div style="float: right;" id="profile-section" class="hidden">
+                <div class="profile-dropdown">
+                    <button id="profile-btn">Profile <i style="transform: translateY(2px);" class="fa fa-caret-down"></i></button>
+                    <ul class="dropdown-menu" id="dropdown-menu">
+                        <li id="view-btn">View Profile</li>
+                        <li id="logout-btn">Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <header class="animate__animated animate__fadeInDown">
+                <a href="profile.html"><div id="profilename"></div></a>
+            </header>
+            <hr>
+
+            <hr>
+            <p class="animate__animated animate__fadeInLeft">
+                this is your profile!
+                how interesting.
+            </p>
+        </div>
+    </fieldset>
+
+    <footer>
+        <div style="float:left;"><a href="math.html">info</a></div>
+        <div style="float:right;">copyright &copy; 2025 <a href="https://kobley.github.io/portfolio">kobley.github.io</a>. All rights reserved</div>
+    </footer>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const logged_in = localStorage.getItem("token");
+            if (!logged_in) {
+                document.location.href = "login.html";
+            }
+        });
+    </script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>
